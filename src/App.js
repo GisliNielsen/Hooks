@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Click from './pages/Click';
+import List from './pages/List';
+import Form from './pages/Form';
+import WindowSize from './pages/WindowSize';
 import './App.css';
+
+const oppgave = 4;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      { oppgave === 1 &&
+        <Click />
+      }
+      { oppgave === 2 &&
+        <List />
+      }
+      { oppgave === 3 &&
+        <WindowSize />
+      }
+      { oppgave === 4 &&
+        <Form />
+      }
+    </>
   );
 }
 
